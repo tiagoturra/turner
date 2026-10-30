@@ -1,0 +1,7 @@
+{
+  "brand": "afinar",
+  "nav": { "howItWorks": "How it works", "features": "Features" },
+  "actions": { "start": "Start tuning", "stop": "Stop tuner", "allowMicrophone": "Allow microphone", "learnMore": "Learn more" },
+  "theme": { "light": "Enable light mode", "dark": "Enable dark mode" },
+  "language": { "change": "Change language", "portuguese": "Português", "english": "English", "shortPortuguese": "PT", "shortEnglish": "EN" }
+}

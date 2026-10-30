@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: var(--font-sans);
+  color: #4a7c59;
+  background: #faf3dd;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --bg: #faf3dd;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --surface: #fffaf0;
+  --ink: #315e48;
+  --muted: #6f8973;
+  --accent: #68b0ab;
+  --accent-strong: #4d9692;
+  --on-accent: #193c35;
+  --soft: #e7eddc;
+  --line: rgba(74, 124, 89, .19);
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100dvh;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  button { font: inherit; }
+}
+
+html[data-theme='dark'] {
+  --bg: #1c3022;
+  --surface: #253f2d;
+  --ink: #faf3dd;
+  --muted: #b4c8ae;
+  --accent: #68b0ab;
+  --accent-strong: #8fc0a9;
+  --on-accent: #18362f;
+  --soft: #304b37;
+  --line: rgba(200, 213, 185, .19);
+}

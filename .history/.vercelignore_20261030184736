@@ -1,0 +1,17 @@
+# Ignorar documentações e diretrizes
+*.md
+docs/
+architecture/
+
+# Ignorar testes e relatórios de cobertura
+**/*.test.tsx
+**/*.test.ts
+**/*.spec.tsx
+**/*.spec.ts
+coverage/
+.lighthouse/
+
+# Ignorar arquivos locais de desenvolvimento
+.env.local
+.env.*.local
+.DS_Store

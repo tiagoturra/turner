@@ -1,0 +1,7 @@
+{
+  "brand": "afinar",
+  "nav": { "howItWorks": "Como funciona", "features": "Recursos" },
+  "actions": { "start": "Começar a afinar", "stop": "Parar afinador", "allowMicrophone": "Permitir microfone", "learnMore": "Saiba mais" },
+  "theme": { "light": "Ativar modo claro", "dark": "Ativar modo escuro" },
+  "language": { "change": "Alterar idioma", "portuguese": "Português", "english": "English", "shortPortuguese": "PT", "shortEnglish": "EN" }
+}
