@@ -21,6 +21,8 @@ npm run preview
 - `src/modules/tuner`: página e interface do afinador.
 - `src/design-system`: componentes reutilizáveis.
 - `src/i18n`: dicionários e configuração de traduções.
+- `src/routes`: configuração central de rotas com React Router.
+- `src/core/storage` e `src/core/url`: helpers tipados para cookies, storage e parâmetros de URL.
 - `src/index.scss`: tokens globais de tema e diretivas Tailwind.
 - `tailwind.config.js`: rastreamento dos arquivos com classes utilitárias.
 - `postcss.config.js`: processamento das diretivas Tailwind.
@@ -47,6 +49,10 @@ O navegador exige um contexto seguro para liberar o microfone: use `localhost` d
 ## Variáveis de ambiente
 
 Não há variáveis de ambiente necessárias nesta versão. Caso sejam introduzidas integrações no navegador, utilize apenas variáveis prefixadas com `VITE_APP_`; nunca inclua segredos no cliente.
+
+## Rotas e helpers
+
+As rotas de cliente usam `react-router-dom` e são declaradas em `src/routes/AppRoutes.tsx`. Operações repetidas de navegador ficam centralizadas em `src/core/`: `storage/browserStorage.ts` para dados não sensíveis, `storage/cookies.ts` para cookies de cliente e `url/params.ts` para parâmetros da URL. Não armazene tokens de autenticação nesses helpers; tokens duradouros devem ser cookies `HttpOnly` definidos pelo servidor.
 
 ## Notas de segurança
 

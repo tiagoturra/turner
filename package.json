@@ -16,6 +16,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-i18next": "latest",
+    "react-router-dom": "latest",
     "vite": "latest"
   },
   "devDependencies": {

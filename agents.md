@@ -94,6 +94,21 @@ project-root/
      }
      ```
 
+## 3.1 Reusable Component Architecture
+
+1. **Composition first:** Prefer composing pages from reusable components over implementing structural UI directly in a page. Repeated or broadly applicable elements such as `Header`, `Footer`, navigation, theme controls, language selectors, buttons, cards, inputs, and section wrappers must be extracted into appropriately scoped components.
+2. **Placement:** Domain-agnostic components belong in `src/design-system/components/`; components reused only within a business domain belong in that domain's `components/` directory. Pages should focus on orchestration, content composition, and module-specific state.
+3. **Single responsibility:** A reusable component must have one clear UI responsibility, a typed public API, and no dependency on a specific page unless it is explicitly domain-scoped.
+4. **Avoid premature abstraction:** Keep one-off visual details within their owning component. Extract a component when it is reused, represents a meaningful interface unit, or is likely to be independently maintained.
+5. **Consistency:** Before creating a new component, inspect the design system and relevant module for an existing component that can be reused or extended.
+
+## 3.2 Routes and Browser Helpers
+
+1. **Routing:** Use `react-router-dom` for all client-side application routes. Route declarations belong in `src/routes/`; pages must be rendered through the route configuration rather than mounted directly from `main.tsx`.
+2. **Browser helpers:** Repeated browser operations must be implemented as typed, focused helpers under `src/core/`, rather than being duplicated in components. This includes URL parameter parsing, cookie access, and local/session storage access.
+3. **Storage safety:** Never use `localStorage`, `sessionStorage`, or client-readable cookies for long-lived authentication credentials. Cookie helpers are only for non-sensitive values; authentication cookies must be set as `HttpOnly`, `Secure`, and `SameSite=Strict` by server-side code.
+4. **Runtime guards:** Browser helpers must guard access to `window`, `document`, and browser storage so they fail safely in non-browser rendering environments.
+
 ## 4. Serverless Architecture (Vercel Functions)
 
 To safely stay within the resource constraints and limits of the Vercel infrastructure, the following API governance rules apply:
